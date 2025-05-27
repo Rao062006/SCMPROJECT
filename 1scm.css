@@ -91,13 +91,30 @@ nav {
 
 .nav-links a {
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease; /* Modified: added transform */
+    position: relative; /* Added: enables ::after positioning */
+    padding-bottom: 5px; /* Added: creates space for the underline */
+}
+
+.nav-links a::after { /* New: creates the underline element */
+    content: '';
+    position: absolute;
+    width: 0%; /* Starts invisible */
+    height: 2px;
+    background-color: #e74c3c; /* Accent color for the underline */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-out; /* Animates the underline growth */
 }
 
 .nav-links a:hover {
     color: #e74c3c;
+    /* transform: translateY(-2px); */ /* Optional: subtle lift on hover, uncomment if desired */
 }
 
+.nav-links a:hover::after { /* New: makes the underline appear on hover */
+    width: 100%; /* Expands to full width on hover */
+}
 .dropdown-menu {
     position: absolute;
     top: 100%;

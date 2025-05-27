@@ -4,45 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amity University Bangalore | Top Ranked Private University in Karnataka</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://www.amity.edu/online/Images/amity-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0pReP4Ztypm/M0F//YtYJMD0w3ti6/b8G8p4Q4lQ/g6J6F/y4s4x4x4x4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="header-top container">
             <div class="logo">
-                <img src="https://www.amity.edu/online/Images/amity-logo.png" alt="Amity University Logo">
-                <div class="logo-text">
-                    <h1>Amity University</h1>
-                    <span>Bangalore, Karnataka</span>
-                </div>
+                <a href="#home" aria-label="Amity University Home">
+                    <img src="https://www.amity.edu/online/Images/amity-logo.png" alt="Amity University Logo" width="50" height="50">
+                    <div class="logo-text">
+                        <h1>Amity University</h1>
+                        <span>Bangalore, Karnataka</span>
+                    </div>
+                </a>
             </div>
             <div class="contact-info">
                 <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+91 80 4646 1600</span>
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    <a href="tel:+918046461600">+91 80 4646 1600</a>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>admission@amity.edu</span>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:admission@amity.edu">admission@amity.edu</a>
                 </div>
             </div>
         </div>
-        <nav>
-            <ul class="nav-links">
+        <nav class="main-nav container" aria-label="Main University Navigation">
+            <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="primary-navigation" data-visible="false">
                 <li><a href="#home">Home</a></li>
                 <li class="dropdown">
-                    <a href="#about">About Us <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
+                    <a href="#about" aria-haspopup="true" aria-expanded="false" id="about-dropdown-trigger">About Us <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="about-dropdown-trigger">
                         <li><a href="#vision-mission">Vision & Mission</a></li>
                         <li><a href="#leadership">Leadership</a></li>
                         <li><a href="#ranking">Rankings</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#programs">Programs <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
+                    <a href="#programs" aria-haspopup="true" aria-expanded="false" id="programs-dropdown-trigger">Programs <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu" aria-labelledby="programs-dropdown-trigger">
                         <li><a href="#engineering">Engineering</a></li>
                         <li><a href="#management">Management</a></li>
                         <li><a href="#law">Law</a></li>
@@ -58,289 +67,361 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Shape Your Future at Amity University Bangalore</h1>
-            <p>India's leading research-driven private university offering world-class education with global exposure</p>
-            <div class="hero-btns">
-                <a href="#admissions" class="btn">Apply Now</a>
-                <a href="#programs" class="btn btn-outline">Explore Programs</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <h2 class="section-title">About Amity University Bangalore</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Amity University Bangalore is a part of the Amity Education Group, India's leading education group with campuses across India and international locations. Established in 2010, the Bangalore campus spans over 60 acres of lush green landscape with state-of-the-art infrastructure.</p>
-                    <p>Recognized by UGC and accredited by NAAC with 'A' Grade, Amity Bangalore offers over 100 programs across disciplines with a strong focus on research, innovation, and industry collaboration.</p>
-                    <ul class="about-features">
-                        <li><i class="fas fa-check-circle"></i> 60+ Acre High-Tech Campus</li>
-                        <li><i class="fas fa-check-circle"></i> 300+ Industry Collaborations</li>
-                        <li><i class="fas fa-check-circle"></i> 100+ Academic Programs</li>
-                        <li><i class="fas fa-check-circle"></i> 500+ Faculty Members</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <img src="https://www.amity.edu/bangalore/images/campus.jpg" alt="Amity University Bangalore Campus">
+    <main id="main-content">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero-content container">
+                <h1 id="hero-title">Shape Your Future at Amity University Bangalore</h1>
+                <p>India's leading research-driven private university offering world-class education with global exposure.</p>
+                <div class="hero-btns">
+                    <a href="#admissions" class="btn btn-primary">Apply Now</a>
+                    <a href="#programs" class="btn btn-outline">Explore Programs</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Programs Section -->
-    <section class="section programs" id="programs">
-        <div class="container">
-            <h2 class="section-title">Our Academic Programs</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Engineering & Technology</h3>
-                    <ul>
-                        <li>B.Tech (CSE, AI, Cyber Security)</li>
-                        <li>M.Tech (Data Science, Robotics)</li>
-                        <li>Ph.D in Engineering</li>
-                    </ul>
-                    <a href="#engineering" class="btn btn-small">Learn More</a>
-                </div>
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Management</h3>
-                    <ul>
-                        <li>BBA (General, International)</li>
-                        <li>MBA (Finance, Marketing, HR)</li>
-                        <li>Executive MBA</li>
-                    </ul>
-                    <a href="#management" class="btn btn-small">Learn More</a>
-                </div>
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3>Law</h3>
-                    <ul>
-                        <li>BA LLB (Hons)</li>
-                        <li>BBA LLB (Hons)</li>
-                        <li>LLM (Corporate Law)</li>
-                    </ul>
-                    <a href="#law" class="btn btn-small">Learn More</a>
-                </div>
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3>Arts & Sciences</h3>
-                    <ul>
-                        <li>B.Sc (Data Science, Psychology)</li>
-                        <li>BA (Economics, Journalism)</li>
-                        <li>MA (English, Sociology)</li>
-                    </ul>
-                    <a href="#arts" class="btn btn-small">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Admissions Section -->
-    <section class="section admissions" id="admissions">
-        <div class="container">
-            <h2 class="section-title">Admissions 2023</h2>
-            <div class="admissions-content">
-                <div class="admissions-process">
-                    <h3>Admission Process</h3>
-                    <ol>
-                        <li>Fill Online Application Form</li>
-                        <li>Appear for Amity Entrance Exam (if applicable)</li>
-                        <li>Personal Interview</li>
-                        <li>Receive Admission Offer</li>
-                        <li>Document Verification & Fee Payment</li>
-                    </ol>
-                    <div class="important-dates">
-                        <h4>Important Dates</h4>
-                        <ul>
-                            <li>Application Deadline: June 30, 2023</li>
-                            <li>Entrance Exam: July 15, 2023</li>
-                            <li>Session Begins: August 1, 2023</li>
+        <section class="section about" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 class="section-title" id="about-title">About Amity University Bangalore</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Amity University Bangalore is a proud part of the **Amity Education Group**, India's leading education conglomerate with campuses across India and international locations. Established in 2010, our Bangalore campus spans over 60 acres of lush green landscape, boasting state-of-the-art infrastructure designed for modern learning.</p>
+                        <p>We are officially recognized by the **University Grants Commission (UGC)** and proudly accredited by NAAC with an **'A' Grade**, a testament to our commitment to academic excellence. Amity Bangalore offers over 100 diverse programs across various disciplines, with a strong emphasis on cutting-edge research, innovation, and robust industry collaboration, ensuring our students are future-ready.</p>
+                        <ul class="about-features" aria-label="Key features of Amity University Bangalore">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <strong>60+ Acre High-Tech Campus:</strong> A sprawling environment for learning and growth.</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <strong>300+ Industry Collaborations:</strong> Bridging academia with real-world industry demands.</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <strong>100+ Academic Programs:</strong> A wide array of choices to shape your career path.</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> <strong>500+ Expert Faculty Members:</strong> Dedicated educators and mentors guiding your journey.</li>
                         </ul>
                     </div>
-                </div>
-                <div class="admissions-form">
-                    <h3>Request Information</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Program</option>
-                                <option>B.Tech</option>
-                                <option>MBA</option>
-                                <option>BA LLB</option>
-                                <option>B.Sc</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn">Submit Request</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Campus Life Section -->
-    <section class="section campus-life" id="campus">
-        <div class="container">
-            <h2 class="section-title">Campus Life</h2>
-            <div class="campus-grid">
-                <div class="campus-card">
-                    <img src="https://www.amity.edu/bangalore/images/hostel.jpg" alt="Hostel Facilities">
-                    <h3>Hostel Facilities</h3>
-                    <p>Separate hostels for boys and girls with modern amenities, 24/7 security, and recreational facilities.</p>
-                </div>
-                <div class="campus-card">
-                    <img src="https://www.amity.edu/bangalore/images/sports.jpg" alt="Sports Facilities">
-                    <h3>Sports Facilities</h3>
-                    <p>Olympic-size swimming pool, basketball courts, cricket ground, indoor sports complex, and gymnasium.</p>
-                </div>
-                <div class="campus-card">
-                    <img src="https://www.amity.edu/bangalore/images/library.jpg" alt="Library">
-                    <h3>Central Library</h3>
-                    <p>200,000+ books, 10,000+ e-journals, digital resources, and quiet study spaces.</p>
-                </div>
-                <div class="campus-card">
-                    <img src="https://www.amity.edu/bangalore/images/cafeteria.jpg" alt="Cafeteria">
-                    <h3>Food Court</h3>
-                    <p>Multi-cuisine food court with hygienic dining facilities and diverse menu options.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Placements Section -->
-    <section class="section placements" id="placements">
-        <div class="container">
-            <h2 class="section-title">Placements & Careers</h2>
-            <div class="placements-content">
-                <div class="placement-stats">
-                    <div class="stat-item">
-                        <h3>95%</h3>
-                        <p>Placement Record</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>300+</h3>
-                        <p>Recruiting Companies</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>₹18 LPA</h3>
-                        <p>Highest Package (2022)</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>₹6.5 LPA</h3>
-                        <p>Average Package</p>
-                    </div>
-                </div>
-                <div class="recruiters">
-                    <h3>Our Top Recruiters</h3>
-                    <div class="recruiter-logos">
-                        <img src="https://www.amity.edu/bangalore/images/recruiters/google.png" alt="Google">
-                        <img src="https://www.amity.edu/bangalore/images/recruiters/amazon.png" alt="Amazon">
-                        <img src="https://www.amity.edu/bangalore/images/recruiters/tcs.png" alt="TCS">
-                        <img src="https://www.amity.edu/bangalore/images/recruiters/infosys.png" alt="Infosys">
-                        <img src="https://www.amity.edu/bangalore/images/recruiters/deloitte.png" alt="Deloitte">
+                    <div class="about-image">
+                        <img src="https://www.amity.edu/bangalore/images/campus.jpg" alt="Aerial view of Amity University Bangalore Campus with modern buildings and green spaces." loading="lazy">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Amity University Bangalore</h3>
-                    <address>
-                        <p><i class="fas fa-map-marker-alt"></i> Sector-1, Hesarghatta Main Road, Bangalore - 560034</p>
-                        <p><i class="fas fa-phone-alt"></i> +91 80 4646 1600</p>
-                        <p><i class="fas fa-envelope"></i> admission@amity.edu</p>
-                        <p><i class="fas fa-globe"></i> www.amity.edu/bangalore</p>
+        <section class="section programs" id="programs" aria-labelledby="programs-title">
+            <div class="container">
+                <h2 class="section-title" id="programs-title">Our Diverse Academic Programs</h2>
+                <div class="programs-grid">
+                    <article class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Engineering & Technology</h3>
+                        <p>Innovate and build the future with our advanced engineering programs.</p>
+                        <ul aria-label="Engineering programs offered">
+                            <li>B.Tech (Computer Science, AI & Machine Learning, Cyber Security)</li>
+                            <li>M.Tech (Data Science, Robotics & Automation)</li>
+                            <li>Ph.D in various Engineering specializations</li>
+                        </ul>
+                        <a href="#engineering" class="btn btn-small">Learn More</a>
+                    </article>
+                    <article class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                        </div>
+                        <h3>Management</h3>
+                        <p>Develop leadership skills and strategic thinking for the business world.</p>
+                        <ul aria-label="Management programs offered">
+                            <li>BBA (General, International Business)</li>
+                            <li>MBA (Finance, Marketing, Human Resources, Operations)</li>
+                            <li>Executive MBA for working professionals</li>
+                        </ul>
+                        <a href="#management" class="btn btn-small">Learn More</a>
+                    </article>
+                    <article class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-gavel" aria-hidden="true"></i>
+                        </div>
+                        <h3>Law</h3>
+                        <p>Pursue justice and understand legal frameworks with our comprehensive law degrees.</p>
+                        <ul aria-label="Law programs offered">
+                            <li>BA LLB (Hons) - Integrated Law</li>
+                            <li>BBA LLB (Hons) - Integrated Business & Law</li>
+                            <li>LLM (Corporate Law, Intellectual Property Rights)</li>
+                        </ul>
+                        <a href="#law" class="btn btn-small">Learn More</a>
+                    </article>
+                    <article class="program-card">
+                        <div class="program-icon">
+                            <i class="fas fa-flask" aria-hidden="true"></i>
+                        </div>
+                        <h3>Arts & Sciences</h3>
+                        <p>Explore diverse fields and foster critical thinking across arts and sciences.</p>
+                        <ul aria-label="Arts and Sciences programs offered">
+                            <li>B.Sc (Data Science, Psychology, Biotechnology)</li>
+                            <li>BA (Economics, Journalism & Mass Communication, Political Science)</li>
+                            <li>MA (English Literature, Sociology)</li>
+                        </ul>
+                        <a href="#arts" class="btn btn-small">Learn More</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section admissions" id="admissions" aria-labelledby="admissions-title">
+            <div class="container">
+                <h2 class="section-title" id="admissions-title">Admissions 2023 - Your Journey Starts Here</h2>
+                <div class="admissions-content">
+                    <div class="admissions-process">
+                        <h3>Admission Process Overview</h3>
+                        <ol>
+                            <li><strong>Step 1: Fill Online Application Form</strong> - Complete your application with accurate details.</li>
+                            <li><strong>Step 2: Appear for Amity Entrance Exam</strong> (if applicable) - Showcase your aptitude.</li>
+                            <li><strong>Step 3: Personal Interview</strong> - A chance to discuss your aspirations.</li>
+                            <li><strong>Step 4: Receive Admission Offer</strong> - Your official invitation to join Amity.</li>
+                            <li><strong>Step 5: Document Verification & Fee Payment</strong> - Secure your spot.</li>
+                        </ol>
+                        <div class="important-dates">
+                            <h4>Important Dates for Admissions</h4>
+                            <ul>
+                                <li><strong>Application Deadline:</strong> June 30, 2023</li>
+                                <li><strong>Entrance Exam:</strong> July 15, 2023</li>
+                                <li><strong>New Session Begins:</strong> August 1, 2023</li>
+                            </ul>
+                            <p class="note"><em>Note: Dates are subject to change. Please check regularly for updates.</em></p>
+                        </div>
+                    </div>
+                    <div class="admissions-form">
+                        <h3>Request More Information</h3>
+                        <form aria-label="Request Information Form">
+                            <p>Interested in a program? Fill out the form below to receive detailed information.</p>
+                            <div class="form-group">
+                                <label for="full-name" class="sr-only">Full Name</label>
+                                <input type="text" id="full-name" name="full-name" placeholder="Full Name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="email-address" class="sr-only">Email Address</label>
+                                <input type="email" id="email-address" name="email-address" placeholder="Email Address" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone-number" class="sr-only">Phone Number</label>
+                                <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="program-select" class="sr-only">Select Program</label>
+                                <select id="program-select" name="program" required aria-required="true">
+                                    <option value="">Select Program of Interest</option>
+                                    <option value="B.Tech">B.Tech (Engineering)</option>
+                                    <option value="MBA">MBA (Management)</option>
+                                    <option value="BA LLB">BA LLB (Law)</option>
+                                    <option value="B.Sc">B.Sc (Sciences)</option>
+                                    <option value="Other">Other Program</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section campus-life" id="campus" aria-labelledby="campus-life-title">
+            <div class="container">
+                <h2 class="section-title" id="campus-life-title">Experience Vibrant Campus Life at Amity</h2>
+                <p class="section-description">Beyond academics, Amity University Bangalore offers a rich and engaging campus environment designed for holistic development.</p>
+                <div class="campus-grid">
+                    <article class="campus-card">
+                        <img src="https://www.amity.edu/bangalore/images/hostel.jpg" alt="Modern hostel building at Amity University Bangalore" loading="lazy">
+                        <h3>Hostel Facilities</h3>
+                        <p>Comfortable and secure separate hostels for boys and girls, equipped with modern amenities, round-the-clock security, and recreational spaces for a home-like experience.</p>
+                    </article>
+                    <article class="campus-card">
+                        <img src="https://www.amity.edu/bangalore/images/sports.jpg" alt="Students playing basketball on campus court" loading="lazy">
+                        <h3>Sports Facilities</h3>
+                        <p>State-of-the-art sports infrastructure including an Olympic-size swimming pool, basketball courts, cricket ground, a well-equipped indoor sports complex, and a modern gymnasium to promote fitness and teamwork.</p>
+                    </article>
+                    <article class="campus-card">
+                        <img src="https://www.amity.edu/bangalore/images/library.jpg" alt="Spacious and well-lit central library at Amity University" loading="lazy">
+                        <h3>Central Library</h3>
+                        <p>Our expansive central library boasts over 200,000 books, 10,000+ e-journals, extensive digital resources, and quiet study spaces, fostering a conducive environment for research and learning.</p>
+                    </article>
+                    <article class="campus-card">
+                        <img src="https://www.amity.edu/bangalore/images/cafeteria.jpg" alt="Students enjoying a meal in the campus food court" loading="lazy">
+                        <h3>Food Court & Cafeteria</h3>
+                        <p>A vibrant multi-cuisine food court offering a diverse menu of hygienic and delicious meal options, catering to varied tastes and preferences, ensuring students are well-nourished.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section research" id="research" aria-labelledby="research-title">
+            <div class="container">
+                <h2 class="section-title" id="research-title">Pioneering Research & Innovation</h2>
+                <div class="research-content">
+                    <p>Amity University Bangalore is a hub for cutting-edge research and innovation. We foster a dynamic environment where faculty and students collaborate on impactful projects, driving advancements in various fields. Our research initiatives are supported by state-of-the-art labs, grants, and collaborations with leading industries and research institutions.</p>
+                    <div class="research-highlights">
+                        <ul>
+                            <li><i class="fas fa-microscope" aria-hidden="true"></i> Advanced Research Centers in AI, Biotechnology, and Sustainable Technologies.</li>
+                            <li><i class="fas fa-lightbulb" aria-hidden="true"></i> Incubation Centre for student startups and entrepreneurial ventures.</li>
+                            <li><i class="fas fa-award" aria-hidden="true"></i> Numerous patents filed and research papers published in reputed journals.</li>
+                            <li><i class="fas fa-users" aria-hidden="true"></i> Opportunities for students to participate in live research projects.</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-secondary">Explore Research Opportunities</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section placements" id="placements" aria-labelledby="placements-title">
+            <div class="container">
+                <h2 class="section-title" id="placements-title">Exceptional Placements & Career Opportunities</h2>
+                <p class="section-description">Amity University Bangalore boasts an outstanding track record in placements, connecting students with top global and national companies.</p>
+                <div class="placements-content">
+                    <div class="placement-stats" aria-label="Placement statistics">
+                        <div class="stat-item">
+                            <h3>95%<span class="plus">+</span></h3>
+                            <p>Placement Record</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>300<span class="plus">+</span></h3>
+                            <p>Recruiting Companies</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>₹18 LPA</h3>
+                            <p>Highest Package (2022)</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>₹6.5 LPA</h3>
+                            <p>Average Package</p>
+                        </div>
+                    </div>
+                    <div class="recruiters">
+                        <h3>Our Esteemed Top Recruiters</h3>
+                        <div class="recruiter-logos" aria-label="Logos of top recruiting companies">
+                            <img src="https://www.amity.edu/bangalore/images/recruiters/google.png" alt="Google Logo" loading="lazy">
+                            <img src="https://www.amity.edu/bangalore/images/recruiters/amazon.png" alt="Amazon Logo" loading="lazy">
+                            <img src="https://www.amity.edu/bangalore/images/recruiters/tcs.png" alt="TCS Logo" loading="lazy">
+                            <img src="https://www.amity.edu/bangalore/images/recruiters/infosys.png" alt="Infosys Logo" loading="lazy">
+                            <img src="https://www.amity.edu/bangalore/images/recruiters/deloitte.png" alt="Deloitte Logo" loading="lazy">
+                            <img src="https://www.amity.edu/bangalore/images/recruiters/wipro.png" alt="Wipro Logo" loading="lazy">
+                            <img src="https://www.amity.edu/bangalore/images/recruiters/cognizant.png" alt="Cognizant Logo" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 class="section-title" id="contact-title">Get in Touch with Amity University Bangalore</h2>
+                <div class="contact-content">
+                    <address class="contact-info">
+                        <h3>Amity University Bangalore</h3>
+                        <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <strong>Address:</strong> Sector-1, Hesarghatta Main Road, Bangalore - 560034, Karnataka, India</p>
+                        <p><i class="fas fa-phone-alt" aria-hidden="true"></i> <strong>Phone:</strong> <a href="tel:+918046461600">+91 80 4646 1600</a></p>
+                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <strong>Email:</strong> <a href="mailto:admission@amity.edu">admission@amity.edu</a></p>
+                        <p><i class="fas fa-globe" aria-hidden="true"></i> <strong>Website:</strong> <a href="https://www.amity.edu/bangalore" target="_blank" rel="noopener noreferrer">www.amity.edu/bangalore</a></p>
                     </address>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    <div class="social-links" aria-label="Social Media Links">
+                        <a href="https://www.facebook.com/AmityUniversityBangalore/" target="_blank" rel="noopener noreferrer" aria-label="Amity University Bangalore on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/AmityBangalore" target="_blank" rel="noopener noreferrer" aria-label="Amity University Bangalore on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/amityuniversitybangalore/" target="_blank" rel="noopener noreferrer" aria-label="Amity University Bangalore on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/school/amity-university-bangalore/" target="_blank" rel="noopener noreferrer" aria-label="Amity University Bangalore on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/channel/UCyA7J7F7B7B7B7B7B7B7B7B" target="_blank" rel="noopener noreferrer" aria-label="Amity University Bangalore on YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.275883804868!2d77.4947938148419!3d13.080512890786967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae2274488b0a87%3A0xb30c7e2b7b5c0e18!2sAmity%20University%20Bangalore!5e0!3m2!1sen!2sin!4v1678280000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location of Amity University Bangalore on Google Maps"></iframe>
                     </div>
                 </div>
-                <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.008459096038!2d77.46143231534415!3d13.11749911528468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae191736187a0f%3A0x1a5e0a9a6a5e5b0f!2sAmity%20University%20Bangalore!5e0!3m2!1sen!2sin!4v1623345678901!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-logo-section">
+                <img src="https://www.amity.edu/online/Images/amity-logo.png" alt="Amity University Logo" width="60" height="60">
+                <p>Amity University Bangalore is recognized as a leading private university in India, committed to delivering exceptional education within a world-class infrastructure and a globally-oriented academic environment.</p>
+            </div>
+            <div class="footer-links-group">
+                <h4>Quick Links</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#placements">Placements</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>Resources</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href="#">Events Calendar</a></li>
+                    <li><a href="#">Photo Gallery</a></li>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Career Opportunities</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated with Our Newsletter</h4>
+                <p>Subscribe to our newsletter to receive the latest updates, news, and event information directly in your inbox.</p>
+                <form aria-label="Newsletter Subscription Form">
+                    <label for="newsletter-email" class="sr-only">Your Email Address</label>
+                    <input type="email" id="newsletter-email" placeholder="Your Email" aria-label="Enter your email for newsletter" required>
+                    <button type="submit" aria-label="Subscribe to newsletter"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                </form>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="https://www.amity.edu/online/Images/amity-logo.png" alt="Amity University Logo">
-                    <p>Amity University Bangalore is ranked among the top private universities in India, offering quality education with world-class infrastructure.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#admissions">Admissions</a></li>
-                        <li><a href="#placements">Placements</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Downloads</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter for latest updates</p>
-                    <form>
-                        <input type="email" placeholder="Your Email">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Amity University Bangalore. All Rights Reserved.</p>
-                <div class="legal-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">Sitemap</a>
-                </div>
+        <div class="footer-bottom container">
+            <p>&copy; <span id="current-year"></span> Amity University Bangalore. All Rights Reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Sitemap</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Optional: JavaScript for mobile menu toggle if you add it in CSS
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.setAttribute('data-visible', !isExpanded);
+                // You'd also toggle a class for styling like nav-links--open
+                // navLinks.classList.toggle('nav-links--open');
+            });
+
+            // Optional: Close dropdowns if clicking outside
+            document.querySelectorAll('.dropdown > a').forEach(trigger => {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent immediate jump
+                    const dropdownMenu = this.nextElementSibling;
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+                    // Close other open dropdowns
+                    document.querySelectorAll('.dropdown-menu[aria-expanded="true"]').forEach(openMenu => {
+                        if (openMenu !== dropdownMenu) {
+                            openMenu.setAttribute('aria-expanded', 'false');
+                            openMenu.previousElementSibling.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    dropdownMenu.setAttribute('aria-expanded', !isExpanded);
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-menu[aria-expanded="true"]').forEach(openMenu => {
+                        openMenu.setAttribute('aria-expanded', 'false');
+                        openMenu.previousElementSibling.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 </html>

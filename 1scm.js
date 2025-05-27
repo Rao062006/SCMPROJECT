@@ -70,24 +70,24 @@ class AmityUniversity {
 const amity = new AmityUniversity();
 
 // Enroll students
-amity.enrollStudent("Rahul Sharma", "B.Tech", 3);
-amity.enrollStudent("Priya Patel", "MBA", 1);
-amity.enrollStudent("Amit Singh", "BBA", 2);
-amity.enrollStudent("Neha Gupta", "B.Tech", 4);
+amity.enrollStudent("Rahul Sharma", "B.Tech(IOT)", 3);
+amity.enrollStudent("Virat sharma", "MBA", 1);
+amity.enrollStudent("Rinku", "BBA", 2);
+amity.enrollStudent("ABISHEK Gupta", "B.Tech cse(AIML)", 4);
 
 // Add grades and attendance
 const students = amity.getAllStudents();
-students[0].addGrade("Mathematics", 8.5);
+students[0].addGrade("Biology", 8.5);
 students[0].addGrade("Physics", 9.0);
 students[0].markAttendance("2023-10-01", "Present");
 
 students[1].addGrade("Marketing", 8.0);
 students[1].addGrade("Finance", 8.5);
-students[1].markAttendance("2023-10-01", "Present");
+students[1].markAttendance("2023-11-11", "Present");
 
 // Display information
 console.log("Amity University Bangalore - Student Records");
-console.log("Total Students:", students.length);
+console.log("Total Studenits:", students.length);
 console.log("Course Statistics:", amity.getCourseStats());
 console.log("Top Performers:", amity.getTopPerformers(3).map(s => s.name));
 

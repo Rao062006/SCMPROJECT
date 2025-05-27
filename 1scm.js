@@ -70,20 +70,20 @@ class AmityUniversity {
 const amity = new AmityUniversity();
 
 // Enroll students
-amity.enrollStudent("Rahul Sharma", "B.Tech(iot)", 3);
-amity.enrollStudent("Virat", "MBA", 1);
-amity.enrollStudent("Rinku Singh", "BBA", 2);
-amity.enrollStudent("Mourya Gupta", "B.Tech cse", 4);
+amity.enrollStudent("Rahul Sharma", "B.Tech(IOT)", 3);
+amity.enrollStudent("Virat sharma", "MBA", 1);
+amity.enrollStudent("Rinku", "BBA", 2);
+amity.enrollStudent("ABISHEK Gupta", "B.Tech cse(AIML)", 4);
 
 // Add grades and attendance
 const students = amity.getAllStudents();
-students[0].addGrade("Chemistry", 8.5);
+students[0].addGrade("Biology", 8.5);
 students[0].addGrade("Physics", 9.0);
 students[0].markAttendance("2023-10-01", "Present");
 
 students[1].addGrade("Marketing", 8.0);
 students[1].addGrade("Finance", 8.5);
-students[1].markAttendance("2023-08-11", "Present");
+students[1].markAttendance("2023-11-11", "Present");
 
 // Display information
 console.log("Amity University Bangalore - Student Records");
